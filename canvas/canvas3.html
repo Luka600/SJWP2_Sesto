@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas vježba 3</title>
+</head>
+<body>
+    <h3>Canvas vježba</h3>
+    <Canvas id="myCan" width="1000" height="500" style="border: 2px solid black;"></Canvas>
+    <script>
+        let c = document.getElementById("myCan");
+        let ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(270,230);
+        ctx.lineTo(200,300);
+        
+        ctx.moveTo(200,300);
+        ctx.lineTo(550,300);
+
+        ctx.moveTo(550,300);
+        ctx.lineTo(620,230);
+        
+        ctx.lineTo(270,230);
+        ctx.moveTo(620,230);
+
+        ctx.stroke();
+        
+
+        ctx.beginPath();
+
+        ctx.moveTo(10,310);
+        ctx.lineTo(50,390);
+
+        ctx.moveTo(50,390);
+        ctx.lineTo(100,450);
+
+        ctx.moveTo(100,450);
+        ctx.lineTo(900,450);
+
+        ctx.moveTo(900,450);
+        ctx.lineTo(915,400);
+
+        ctx.moveTo(915,400);
+        ctx.lineTo(930,370);
+
+        ctx.moveTo(930,370);
+        ctx.lineTo(930,310);
+
+        ctx.moveTo(10,310);
+        ctx.lineTo(930,310);
+
+        ctx.stroke();
+
+        ctx.beginPath();
+
+        
+    </script>
+</body>
+</html>
