@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 2rem;
+            max-width: 480px;
+            margin: auto;
+        }
+       input[type=number]{
+            width: 6rem;
+            padding: 0.25rem;
+       }
+       button{
+        padding: 0.4rem 0.8rem;
+        margin-left: 0.5rem;
+
+       }
+       #msg{
+        margin-top: 1rem;
+        font-weight: 600;
+       }
+       #tries{
+        color: #555;
+        margin-top: .5rem;
+       }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Guess the number</h1>
+    <h3>(1 - 100)</h3>
+    <form id="form1" onsubmit="checkNumber(event)">
+        <label for="guess">Enter number: </label>
+        <input type="number" id="guess" min="1" max="100" required>
+        <button type="submit">Guess</button>
+        <button type="button" onclick="newGame()">New Game</button>
+    </form>
+        <div id="msg"></div>
+        <div id="tries"></div>
+
+
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>
