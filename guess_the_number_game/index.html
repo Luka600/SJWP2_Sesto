@@ -37,7 +37,7 @@
     <form id="form1" onsubmit="checkNumber(event)">
         <label for="guess">Enter number: </label>
         <input type="number" id="guess" min="1" max="100" required>
-        <button type="submit">Guess</button>
+        <button type="submit" onclick="checkNumber()">Guess</button>
         <button type="button" onclick="newGame()">New Game</button>
     </form>
         <div id="msg"></div>
