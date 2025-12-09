@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Caclulator</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 2rem;
+            max-width: 480px;
+            margin: auto;
+        }
+        input[type=number]{
+            width: 6rem;
+            padding: 0.25rem;
+            margin-top: 0.5rem;
+       }
+       label{
+        margin-right: 0.5rem;
+       }
+       #lab1{
+        margin-right: 2rem;
+       }
+       button{
+        padding: 0.4rem 0.8rem;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+       }
+       #result{
+        background-color: lightgrey;
+        width: 16rem;
+        height: 16rem;
+        text-align: center;
+        
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Mini Calculator</h1>
+        <label id="lab1" for="num1">First number: </label>
+        <input type="number" id="num1"required>
+        <br>
+        <label for="num2">Second number: </label>
+        <input type="number" id="num2"required>
+        <br>
+        <button type="submit" onclick="addition()">+</button>
+        <button type="submit" onclick="subtraction()">-</button>
+        <button type="submit" onclick="multiplication()">×</button>
+        <button type="submit" onclick="division()">÷</button>
+        <button type="submit" onclick="clear()">CE</button>
+        <div>
+            <h2>Result:</h2>
+            <div id="result"></div>
+        </div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
