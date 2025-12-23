@@ -62,7 +62,7 @@ function calc8(){
     res8.innerHTML = (Number((parseFloat(num16.value) * parseFloat(num17.value)) / (parseFloat(num16.value) + parseFloat(num17.value)))).toFixed(2) + " μF"
 }
 function calc9(){
-    res9.innerHTML = (Number(parseFloat(pervak) * ((Math.pow(parseFloat(num18.value),2) * parseFloat(num19.value)) / parseFloat(num20.value)))) + " H"
+    res9.innerHTML = (Number((parseFloat(pervak) * ((Math.pow(parseFloat(num18.value),2) * parseFloat(num19.value)) / parseFloat(num20.value)))) * parseFloat(1000000)).toFixed(2) + " μH"
 }
 function calc10(){
     res10.innerHTML = (Number(parseFloat(1) / (parseFloat(num21.value) * parseFloat(num22.value)))).toFixed(2) + " Ω"
