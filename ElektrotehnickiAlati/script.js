@@ -1,1 +1,1 @@
-let res = document.getElementById("result")
+let res1 = document.getElementById("result1")
