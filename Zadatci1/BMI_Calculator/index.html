@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<style>
+    body{
+        background-color: gold;
+    }
+    .container{
+        display: flex;
+       
+        padding: 2rem;
+        width: 400px;
+        height: 500px;
+        margin: auto;
+        border: 1px solid black;
+
+        
+        align-items: center;
+        flex-direction: column;
+    }
+    .button{
+        padding: 1rem;
+        background-color: blue;
+        color: white;
+    }
+    .result{
+        font-size: 60px;
+        color: blue;
+    }
+</style>
+<body>
+    <div class="container">
+        <input id="inp1" type="number">
+        <label for="inp1">Height in M</label>
+        <input id="inp2" type="number">
+        <label for="inp2">Weight in KG</label>
+        <button>Calculate</button>
+        <div class="result">0</div>
+    </div>
+</body>
+</html>
