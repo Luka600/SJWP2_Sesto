@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<style>
+ body{
+        background-color: white;
+        font-family: sans-serif;
+    }
+    h1{
+        color: black;
+        font-size: 45px;
+    }
+    .container{
+    display: flex;
+    padding: 2rem;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    
+    align-items: center;
+    
+    flex-direction: column;
+}
+input{
+    width: 400px;
+    padding: 1rem;
+
+}
+label{
+    width: 100px;
+}
+button{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 400px;
+}
+div{
+    margin: 1rem;
+}
+label{
+    background-color: lightskyblue;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+.res{
+    width: 400px;
+    padding: 2rem;
+    border: solid 1px black;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div>
+            <label for="inp1">BIT</label>
+            <input id="inp1" type="number">
+        </div>
+        <div>
+            <label for="inp2">EUR</label>
+            <div class="res" id="inp2" >
+        </div>
+        <div>
+            <label for="inp3">USD</label>
+            <div class="res" id="inp3">
+        </div>
+        <button>Convert</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

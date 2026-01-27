@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+</head>
+<style>
+body{
+        background-color: mediumturquoise;
+        font-family: sans-serif;
+    }
+    h1{
+        color: white;
+        font-size: 45px;
+    }
+    .container{
+    display: flex;
+    padding: 2rem;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    
+    align-items: center;
+    
+    flex-direction: column;
+}
+.cont2{
+    display: flex;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    border-radius: 5px;
+    padding: 1rem;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Temperature Conversion</h1>
+        <div class="cont2">
+            <label for="inp1">Celsius</label>
+            <input id="inp1" type="number">
+            <label for="inp1">Fahrenheit</label>
+            <input id="inp1" type="number">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
