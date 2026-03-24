@@ -37,6 +37,7 @@
             margin: 1%;
             padding: 1%;
             gap: 1%;
+            /* row-gap: 5%; */
             /* background-color: #5e0fe1; */
             background: linear-gradient(to bottom right, #5e0fe1 , #31037a);
             width: 100%;
@@ -44,6 +45,7 @@
         .movie{
             display: grid;
             grid-template-rows: 90% 10%;
+           /*  display: flex; */
             border: 1px solid #b170fa;
             height: 350px;
             width: 250px;   
@@ -51,8 +53,11 @@
             align-content: center;
            align-self: center;
            justify-content: center;
-           background-color: #5918c9;
+           justify-items: center;
+           background-color: #5918c9d8;
            transition: transform .2s;
+           /* flex-direction: column;
+           height: 110%; */
             
         }
         .movie:hover {
@@ -67,6 +72,22 @@
             font-weight: bolder;
             font-size: larger;
         }
+
+        #modal {
+            display: none; 
+            position: fixed; 
+            left: 30%;
+            top: 45%;
+            width: 30%; 
+            height: 35%;
+            margin: 1%;
+            padding: 1%; 
+            overflow: auto; 
+            background: linear-gradient(to bottom right, #5627a3ce, #31037abb);
+            border: solid 1px #D6C5F0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -78,86 +99,95 @@
         <a href="indexC.html">Games</a>
     </div>
     <div id="container">
-        <div class="movie">
+        <div class="movie" onclick="openModal('Blade Runner 2049', '2017', 'Harrison Ford, Ryan Gosling, Ana de Armas', 'Young Blade Runner K\'s discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who\'s been missing for thirty years.')">
             <img class="coverimg" src="./imgA/movie1.jpg" alt="image">
             <p class="title">Blade Runner 2049</p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('American Psycho', '2000', 'Christian Bale, Justin Theroux, Josh Lucas', 'A wealthy New York City investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies.')">
+            <img class="coverimg" src="./imgA/movie2.jpg" alt="image">
+            <p class="title">American Psycho</p>
+        </div>
+        <div class="movie" onclick="openModal('A Minecraft Movie', '2025', 'Jason Momoa, Jack Black, Sebastian Hansen', 'Four misfits are suddenly pulled through a mysterious portal into a bizarre cubic wonderland that thrives on imagination. To get back home they\'ll have to master this world while embarking on a quest with an unexpected expert crafter.')">
+            <img class="coverimg" src="./imgA/movie3.jpg" alt="image">
+            <p class="title">A Minecraft Movie</p>
+        </div>
+        <div class="movie" onclick="openModal('Thor: Ragnarok', '2017', 'Chris Hemsworth, Tom Hiddleston, Cate Blanchett', 'Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.')">
+            <img class="coverimg" src="./imgA/movie4.jpg" alt="image">
+            <p class="title">Thor: Ragnarok</p>
+        </div>
+        <div class="movie" onclick="openModal('Ice Age', '2002', 'Denis Leary, John Leguizamo, Ray Romano', 'Manny the mammoth, Sid the loquacious sloth, and Diego the sabre-toothed tiger go on a comical quest to return a human baby back to his father, across a world on the brink of an ice age.')">
+            <img class="coverimg" src="./imgA/movie5.jpg" alt="image">
+            <p class="title">Ice Age</p>
+        </div>
+        <div class="movie" onclick="openModal('Ice Age 2: The Meltdown', '2006', 'Ray Romano, John Leguizamo, Denis Leary', 'Manny, Sid and Diego discover that the ice age is coming to an end, and join everybody for a journey to higher ground. On the trip, they discover that Manny is not in fact the last of the woolly mammoths.')">
+            <img class="coverimg" src="./imgA/movie6.jpg" alt="image">
+            <p class="title">Ice Age 2: The Meltdown</p>
+        </div>
+        <div class="movie" onclick="openModal('Ice Age: Dawn of the Dinosaurs', '2009', 'Ray Romano, John Leguizamo, Denis Leary', 'When Sid\'s attempt to adopt three dinosaur eggs gets him abducted by their real mother to an underground lost world, his friends attempt to rescue him.')">
+            <img class="coverimg" src="./imgA/movie7.jpg" alt="image">
+            <p class="title">Ice Age: Dawn of the Dinosaurs</p>
+        </div>
+        <div class="movie" onclick="openModal('Ice Age: Continental Drift', '2012', 'Ray Romano, John Leguizamo, Denis Leary', 'Manny, Diego, and Sid embark upon another adventure after their continent is set adrift. Using an iceberg as a ship, they encounter sea creatures and battle pirates as they explore a new world.')">
+            <img class="coverimg" src="./imgA/movie8.jpg" alt="image">
+            <p class="title">Ice Age: Continental Drift</p>
+        </div>
+        <div class="movie" onclick="openModal('Ice Age: Collision Course', '2016', 'Ray Romano, John Leguizamo, Denis Leary', 'When Scrat\'s acorn sends an asteroid to Earth, the Herd must find a way to stop the asteroid from hitting Earth with the help of a returning friend.')">
+            <img class="coverimg" src="./imgA/movie9.jpg" alt="image">
+            <p class="title">Ice Age: Collision Course</p>
+        </div>
+        <div class="movie" onclick="openModal('Akira', '1988', 'Mitsuo Iwata, Nozomu Sasaki, Mami Koyama', 'A secret military project endangers Neo-Tokyo when it turns a teenage biker gang member into a rampaging psychic psychopath who can only be stopped by his best friend.')">
+            <img class="coverimg" src="./imgA/movie10.jpg" alt="image">
+            <p class="title">Akira</p>
+        </div>
+        <div class="movie" onclick="openModal('Shrek', '2001', 'Mike Myers, Eddie Murphy, Cameron Diaz', 'A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.')">
+            <img class="coverimg" src="./imgA/movie11.jpg" alt="image">
+            <p class="title">Shrek</p>
+        </div>
+        <div class="movie" onclick="openModal('Shrek 2', '2004', 'Mike Myers, Eddie Murphy, Cameron Diaz', 'Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona\'s parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.')">
+            <img class="coverimg" src="./imgA/movie12.jpg" alt="image">
+            <p class="title">Shrek 2</p>
+        </div>
+        <div class="movie" onclick="openModal('Shrek the Third', '2007', 'Mike Myers, Eddie Murphy, Cameron Diaz', 'Reluctantly designated as the heir to the land of Far, Far Away, Shrek hatches a plan to install the rebellious Artie as the new king while Princess Fiona tries to fend off a coup d\'état by the jilted Prince Charming.')">
+            <img class="coverimg" src="./imgA/movie13.jpg" alt="image">
+            <p class="title">Shrek the Third</p>
+        </div>
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgA/movie" alt="image">
             <p class="title"></p>
         </div>
     </div>
+
+    <div id="modal">
+        <h1 id="modalTitle"></h1>
+        <p id="modalReleaseDate"></p>
+        <p id="modalActors"></p>
+        <p id="modalDesc"></p>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
