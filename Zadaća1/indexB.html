@@ -4,160 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadaća 1 - Serije</title>
-
-    <style>
-        body{
-            width: 94%;
-            background: linear-gradient(to bottom, #1B0044 , #12002c); 
-            padding: 0.5%;
-            color: #D6C5F0;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        #header{
-            display: grid;
-            grid-template-columns: 20% 55% 10% 10% 10%;
-            grid-template-rows: 5%;
-            /* background-color: #5727A3; */
-            background: linear-gradient(to bottom, #5727A3 , rgb(15, 0, 36));
-            padding: 10px;
-            align-items: center;
-            align-content: center;
-            font-size: 140%;
-            width: 103%;
-        }
-        a{
-            color: #b170fa;
-               
-        }
-        #container{
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 25% 25% 25% 25%;
-            border: 1px solid #D6C5F0;
-            margin: 1%;
-            padding: 1%;
-            gap: 1%;
-            /* background-color: #5e0fe1; */
-            background: linear-gradient(to bottom right, #5e0fe1 , #31037a);
-            width: 100%;
-        }
-        .movie{
-            display: grid;
-            grid-template-rows: 90% 10%;
-            border: 1px solid #b170fa;
-            height: 350px;
-            width: 250px;   
-            align-items: center;
-            align-content: center;
-           align-self: center;
-           justify-content: center;
-           background-color: #5918c9;
-           transition: transform .2s;
-            
-        }
-         .movie:hover {
-            transform: scale(1.05);
-        }
-        .coverimg{
-            width: 200px;
-            height: 300px;
-        }
-        .title{
-            text-align: center;
-            font-weight: bolder;
-            font-size: larger;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
      <div id="header">
-        <h1>My Series</h1>
+        <h1>My Anime</h1>
         <p></p>
         <a href="indexA.html">Movies</a>
         <p>Series</p>
         <a href="indexC.html">Games</a>
     </div>
     <div id="container">
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('Digimon Adventure', '1999-2000', 'Hiroaki Hirata, Joshua Seth, Toshiko Fujita', 'A group of young teens is unexpectedly sent to the mysterious Digital World and paired up with their own powerful, morphing monster called the Digimon. Together the entire group set out on an adventure to fight evil and save the world.')">
+            <img class="coverimg" src="./imgB/series1.jpg" alt="image">
+            <p class="title">Digimon Adventure</p>
+        </div>
+        <div class="movie" onclick="openModal('Bocchi the Rock!', '2022', 'Yoshino Aoyama, Sayumi Suzushiro, Saku Mizuno', 'Hitori \'Bocchi-chan\' Gotoh is a lonely high school girl whose heart lies in her guitar. One day, she meets Nijika Ijichi and joins \'Kessoku Band\'. After that, her daily life starts to change little by little.')">
+            <img class="coverimg" src="./imgB/series2.jpg" alt="image">
+            <p class="title">Bocchi the Rock!</p>
+        </div>
+        <div class="movie" onclick="openModal('JoJo\'s Bizarre Adventure', '2012-ongoing', 'David Vincent, Daisuke Ono, Matthew Mercer', 'The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives.')">
+            <img class="coverimg" src="./imgB/series3.jpg" alt="image">
+            <p class="title">JoJo's Bizarre Adventure</p>
+        </div>
+        <div class="movie" onclick="openModal('Nichijou: My Ordinary Life', '2011', 'Shizuka Furuya, Hiromi Konno, Mariko Honda', 'Follow the adventures of three ordinary girls as they learn their most important lessons the hard way. Meanwhile, a pocket-sized professor makes life difficult for a robot who just wants to be normal.')">
+            <img class="coverimg" src="./imgB/series4.jpg" alt="image">
+            <p class="title">Nichijou: My Ordinary Life</p>
+        </div>
+        <div class="movie" onclick="openModal('Jujutsu Kaisen', '2020-ongoing', 'Jun\'ya EnokiAdam McArthurYuma Uchida', 'After Yuji Itadori swallows a cursed talisman - the finger of a demon - he becomes cursed himself. He enters a shaman\'s school to be able to locate the demon\'s other body parts and thus exorcise himself.')">
+            <img class="coverimg" src="./imgB/series5.jpg" alt="image">
+            <p class="title">Jujutsu Kaisen</p>
+        </div>
+        <div class="movie" onclick="openModal('Girls\' Last Tour', '2017', 'Inori Minase, Yurika Kubo, Juliet Simmons', 'Two girls wander a world destroyed by war.')">
+            <img class="coverimg" src="./imgB/series6.jpg" alt="image">
+            <p class="title">Girls' Last Tour</p>
+        </div>
+        <div class="movie" onclick="openModal('Chainsaw Man', '2022', 'Kikunosuke Toya, Ryan Colt Levy, Tomori Kusunoki', 'Following a betrayal, a young man left for dead is reborn as a powerful devil-human hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils.')">
+            <img class="coverimg" src="./imgB/series7.jpg" alt="image">
+            <p class="title">Chainsaw Man</p>
+        </div>
+        <div class="movie" onclick="openModal('K-On!', '2009-2010', 'Aki Toyosaki, Yôko Hikasa, Satomi Satô', 'K-ON is about 5 high school girls who become friends through the Light Music Club. Yui the lead guitarist, Tsumugi the keyboardist, Mio the bassist, Azusa the rhythm guitarist, and Ritsu the drummer. K-ON is the story of 5 aspiring musicians and their journey through high school together.')">
+            <img class="coverimg" src="./imgB/series8.jpg" alt="image">
+            <p class="title">K-On!</p>
+        </div>
+        <div class="movie" onclick="openModal('Fullmetal Alchemist: Brotherhood', '2009-2010', 'Kent Williams, Iemasa Kayumi, Romi Park', 'Two brothers search for a Philosopher\'s Stone after an attempt to revive their deceased mother goes awry and leaves them in damaged physical forms.')">
+            <img class="coverimg" src="./imgB/series9.jpg" alt="image">
+            <p class="title">Fullmetal Alchemist: Brotherhood</p>
+        </div>
+        <div class="movie" onclick="openModal('Uma Musume: Cinderella Gray', '2025-ongoing', 'Tomoyo Takayanagi, Momoko Seto, Hôchû Ôtsuka', 'Uma Musume are racers who inherit the names and spirits of legendary racehorses from another world.')">
+            <img class="coverimg" src="./imgB/series10.jpg" alt="image">
+            <p class="title">Uma Musume: Cinderella Gray</p>
+        </div>
+        <div class="movie" onclick="openModal('Hellsing', '2001-2002', 'Jôji Nakata, Yoshiko Sakakibara, Fumiko Orikasa', 'A British taskforce, lead by the daughter of the vampire hunter Prof. Van Helsing, battles the supernatural with the aid of two vampires.')">
+            <img class="coverimg" src="./imgB/series11.jpg" alt="image">
+            <p class="title">Hellsing</p>
+        </div>
+        <div class="movie" onclick="openModal('Dragon Ball', '', '', '')">
+            <img class="coverimg" src="./imgB/series12.jpg" alt="image">
+            <p class="title">Dragon Ball</p>
+        </div>
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series13.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series14.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series15.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series16.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series17.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series18.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series19.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
+        <div class="movie" onclick="openModal('', '', '', '')">
+            <img class="coverimg" src="./imgB/series20.jpg" alt="image">
             <p class="title"></p>
         </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
-        <div class="movie">
-            <img class="coverimg" src="" alt="image">
-            <p class="title"></p>
-        </div>
+    </div>
+    
+    <div id="modal">
+        <h1 id="modalTitle"></h1>
+        <p id="modalReleaseDate"></p>
+        <p id="modalActors"></p>
+        <p id="modalDesc"></p>
     </div>
     
     <script src="index.js"></script>

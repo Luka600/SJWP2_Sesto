@@ -1,0 +1,81 @@
+  body{
+            width: 94%;
+            background: linear-gradient(to bottom, #1B0044 , #12002c); 
+            padding: 0.5%;
+            color: #D6C5F0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        #header{
+            display: grid;
+            grid-template-columns: 20% 55% 10% 10% 10%;
+            grid-template-rows: 5%;
+            /* background-color: #5727A3; */
+            background: linear-gradient(to bottom, #5727A3 , rgb(15, 0, 36));
+            padding: 10px;
+            align-items: center;
+            align-content: center;
+            font-size: 140%;
+            width: 103%;
+        }
+        a{
+            color: #b170fa;
+               
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 25% 25% 25% 25%;
+            border: 1px solid #D6C5F0;
+            margin: 1%;
+            padding: 1%;
+            gap: 1%;
+            /* row-gap: 5%; */
+            /* background-color: #5e0fe1; */
+            background: linear-gradient(to bottom right, #5e0fe1 , #31037a);
+            width: 100%;
+        }
+        .movie{
+            display: grid;
+            grid-template-rows: 80% 15%;
+           /*  display: flex; */
+            border: 1px solid #b170fa;
+            height: 395px;
+            width: 250px;   
+            align-items: center;
+            align-content: center;
+           align-self: center;
+           justify-content: center;
+           justify-items: center;
+           background-color: #5918c9d8;
+           transition: transform .2s;
+           /* flex-direction: column;
+           height: 110%; */
+            
+        }
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        .coverimg{
+            width: 200px;
+            height: 300px;
+        }
+        .title{
+            text-align: center;
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        #modal {
+            display: none; 
+            position: fixed; 
+            left: 30%;
+            top: 45%;
+            width: 30%; 
+            height: 35%;
+            margin: 1%;
+            padding: 1%; 
+            overflow: auto; 
+            background: linear-gradient(to bottom right, #5627a3ce, #31037abb);
+            border: solid 1px #D6C5F0;
+        }
